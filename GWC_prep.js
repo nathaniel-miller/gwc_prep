@@ -19,6 +19,46 @@ function existsPairForSum(array, sum) {
   return isPair;
 }
 
+
+
+
+function existsPairForSumII(array, sum) {
+
+  let exists = array.some(function(itemA, indexA) {
+    let x = array.some(function(itemB, indexB) {
+
+      if (indexA != indexB && itemA + itemB == sum) {
+        return true;
+      }
+
+    });
+
+    return x;
+  });
+
+  return exists;
+}
+
+function existsPairForSumII(array, sum) {
+
+  let exists = array.some(function(itemA, indexA) {
+    let x = array.some(function(itemB, indexB) {
+
+      if (indexA != indexB && itemA + itemB == sum) {
+        return true;
+      }
+
+    });
+
+    return x;
+  });
+
+  return exists;
+}
+
+
+existsPairForSumIII([20, 2, 98, 80], 100);
+
 // level 1.1 - alt way of attacking -
 function altExistsPairForSum(array, sum) {
 
